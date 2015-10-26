@@ -50,6 +50,7 @@ def plot_image(x, save_path = None, width=28, height=28):
         plt.savefig(save_path)
 
 def test():
+    #This is a test, and this comment is also a test of the slack integration.
     data = load_data()
     train = data["train"]
     train_X = train[0]
