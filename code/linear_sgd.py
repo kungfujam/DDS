@@ -1,8 +1,8 @@
 """
-This tutorial introduces logistic regression using Theano and stochastic
+This tutorial introduces linear regression using Theano and stochastic
 gradient descent.
 
-Logistic regression is a probabilistic, linear classifier. It is parametrized
+Linear regression is a probabilistic, linear classifier. It is parametrized
 by a weight matrix :math:`W` and a bias vector :math:`b`. Classification is
 done by projecting data points onto a set of hyperplanes, the distance to
 which is used to determine a class membership probability.
@@ -46,17 +46,17 @@ import theano
 import theano.tensor as T
 
 
-class LogisticRegression(object):
-    """Multi-class Logistic Regression Class
+class LinearRegression(object):
+    """Multi-class Linear Regression Class
 
-    The logistic regression is fully described by a weight matrix :math:`W`
+    The linear regression is fully described by a weight matrix :math:`W`
     and bias vector :math:`b`. Classification is done by projecting data
     points onto a set of hyperplanes, the distance to which is used to
     determine a class membership probability.
     """
 
     def __init__(self, input, n_in, n_out):
-        """ Initialize the parameters of the logistic regression
+        """ Initialize the parameters of the linear regression
 
         :type input: theano.tensor.TensorType
         :param input: symbolic variable that describes the input of the
@@ -293,9 +293,9 @@ def sgd_optimization_mnist(learning_rate=0.13, n_epochs=1000,
     x = T.matrix('x')  # data, presented as rasterized images
     y = T.ivector('y')  # labels, presented as 1D vector of [int] labels
 
-    # construct the logistic regression class
+    # construct the linear regression class
     # Each MNIST image has size 28*28
-    classifier = LogisticRegression(input=x, n_in=28 * 28, n_out=10)
+    classifier = LinearRegression(input=x, n_in=28 * 28, n_out=10)
 
     # the cost we minimize during training is the negative log likelihood of
     # the model in symbolic format
