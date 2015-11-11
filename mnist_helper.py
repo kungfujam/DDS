@@ -1,5 +1,6 @@
 import cPickle
 import gzip
+import os
 import matplotlib.pyplot as plt
 
 def load_data(path=None):
