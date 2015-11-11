@@ -16,7 +16,7 @@ class Layer(object):
         pass
 
     def get_params(self):
-        #Returns a list of paramaters which are theano shared variables.
+        #Returns a list of parameters which are theano shared variables.
         pass
 
 
